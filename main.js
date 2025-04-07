@@ -10,21 +10,24 @@ var soundHandle = new Audio();
 var triggered=false;
 var nosound=true;
 var params = new URLSearchParams(window.location.search.slice(1));
-var color1 = '#ff95c8';
-var color2 = '#5194f8';
-var color3 ='#969696';
+var color1 = '#ffc0cb';
+var color2 = '#7FB1ED';
+var color4 ='#969696';
+var color3 = 'linear-gradient(90deg, rgba(255,192,203,1) 0%, rgba(182,182,242,1) 50%, rgba(127,177,237,1) 100%)';
 var colortxt1 = '#F860AA';
-var colortxt2= '#7FB1ED';
-var colortxt3= '#000000';
+var colortxt2= '#0066FFFF';
+var colortxt3= '#424242';
 //Select the background color
-var color =color1;
+var color =color3;
 //Select the text color
-var colortxt = colortxt1;
-var gendertext1 = "It is a Girl!";
-var gendertext2 = "It is a Boy!";
-var gendertext3= "It is a Demo!";
+var colortxt = colortxt3;
+var gendertext1 = "It's Twin Girls!";
+var gendertext2 = "It's Twin Boys!";
+var gendertext3= "It's";
+var gendertext4= "It is a Demo!";
+
 //Select the gender text
-var gendertext = gendertext1;
+var gendertext = gendertext3;
 function randomInRange(min, max) {
     return Math.random() * (max - min) + min;
 };
@@ -37,12 +40,15 @@ function confetti_effect() {
     $('#tboy').show();
     $('#tboy').text(gendertext);
     $('#tboy').css('color',colortxt);
-    $('#boy').hide();
-    //$('.images').hide();
-    $('#or').hide();
-    $('#girl').hide();
+    //$('#boy').hide();
+    $('#boy').text("a Boy");
+    $('#or').text(" & ");
+    $('#twins').hide();
+    //$('#girl').hide();
+    $('#girl').text("a Girl");
     document.getElementsByTagName("body")[0].style.backgroundColor = color;
     document.getElementsByTagName("body")[0].style.backgroundImage = 'none';
+    $("body").css("background-image",color);
     //document.getElementById("H3").insertAdjacentHTML('afterend', "<h4 id='testtext' style='white-space:normal'> Depending on the product you buy, here it will say either <br> 'It is a Girl!' or 'It is a Boy! with pink or blue background.</h4>");
 
     $('#H3').hide();
@@ -102,6 +108,12 @@ export {playticksound};
 
         $('#tboy').hide();
         $('#boy').show();
+        
+        $('#or').text(" or ");
+        $('#boy').text("Boy");
+        $('#girl').text("Girl");
+        
+        $('#twins').show();
         $('#or').show();
         $('#girl').show();
         //$('.images').show();
@@ -125,9 +137,9 @@ export {playticksound};
         var i, i1;
         surname = params.get('surname');
         if (surname !=null && surname.replace(/\s/g, '').length) {
-            $("#baby").text('baby ' + surname+'!');}
+            $("#baby").text('baby ' + surname+'(s)');}
         else {
-            $("#baby").text('the baby!');
+            $("#baby").text('the baby(ies)');
             surname="the";
             document.getElementById('surname').style.fontWeight="normal";
         }

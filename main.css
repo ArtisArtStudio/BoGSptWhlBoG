@@ -64,14 +64,14 @@ font-family: "Pacifico", cursive;
 display:flexbox;
 font-weight: 400;
 flex-direction: column;
-font-size: calc(3rem + 4vw);
+font-size: calc(3rem + 2vw);
 text-align: center;
 text-shadow: 4px 6px #FFFFFF;
 } 
 .pagetop h3 {
 font-family: "Alegreya SC", serif;
 flex-direction: column;
-font-size:calc(1.2rem + 2vw);
+font-size:calc(1.2rem + 1vw);
 color: #000000 !important;
 text-align: center;
 font-weight: 400;
@@ -108,7 +108,6 @@ white-space:normal;
   white-space: normal;
 }
 #boy{
-  line-height: 5vh;
   text-align: center;
 }
 #t1 {
@@ -137,7 +136,7 @@ white-space:normal;
     font-size: calc(0.7rem + 1vw) ;
   }
   .pagetop h1 {
-    font-size: calc(3rem + 4vw);
+    font-size: calc(3rem + 2vw);
   }
 /*    #scratcher-box {
     width: 24em;
@@ -159,9 +158,6 @@ white-space:normal;
   .pagetop h3 {
     font-size: calc(1.5rem + 0.5vw);
   }
-  #or{
-    line-height: 5vh !important;
-  }
 }  */
 
 @media (min-width: 768px) and (min-height: 930px){ 
@@ -170,12 +166,10 @@ white-space:normal;
     font-size: calc(1.5rem + 1.2vw);
   }
   .pagetop h1 {
-    font-size: calc(5rem + 4vw);
+    font-size: calc(3rem + 4vw);
   }
 
-  #boy{
-    line-height: 18vh !important;
-  }
+  
   #scratcher-box {
     position:absolute;
     width: 30em;
@@ -185,14 +179,12 @@ white-space:normal;
 }
 @media (min-height: 635px) and (min-width: 1024px){ 
   .pagetop h3 {
-    font-size: calc(2rem + 0.5vh);
+    font-size: calc(1.5rem + 0.5vh);
   }
   .pagetop h4 {
     font-size: 2vh;
   }
-  #boy{
-    line-height: 20vh !important;
-  }
+ 
   #scratcher-box {
     position:absolute;
     width: 26em;
@@ -208,7 +200,7 @@ white-space:normal;
     font-size: calc(3rem + 1.8vw);
   }
   .pagetop h3 {
-    font-size: calc(1.5rem + 0.5vw);
+    font-size: calc(1.2rem + 0.5vw);
   }
   /* #mainbody {
     position: inherit;
@@ -218,9 +210,7 @@ white-space:normal;
       -o-transform-origin: top left;
       transform-origin: top left;
   } */
-/*   #boy {
-    line-height: 6vh !important;
-  }
+/* 
   .images{
     max-width: 80% !important;
   } */
@@ -235,30 +225,26 @@ white-space:normal;
 
 @media (max-width: 320px) { 
    .pagetop h1 {
-    font-size: calc(3rem + 2vw);
+    font-size: calc(2rem + 2vw);
   }
   .pagetop h3 {
-    font-size: calc(1.4rem + 0.5vw);
+    font-size: calc(1.1rem + 0.5vw);
   }
   .pagetop h4 {
     font-size: calc(0.7rem + 0.6vw) ;
   }
- #boy {
-    line-height: 16vh !important;
+  #boy {
+    line-height: 1 !important;
   }
   /* .images{
     max-width: 80% !important;
   } */
   #scratcher-box {
     position:absolute;
-    width: 18em;
-    height: 18em; 
-    top: 65%;
+    width: 17em;
+    height: 17em; 
+    top: 68%;
   }
-
-   #H3 {
-    line-height: 20px;
-  } 
   /* #t1 {
     width: 300px;
   } */

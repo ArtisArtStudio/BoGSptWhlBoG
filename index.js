@@ -23,7 +23,7 @@ window.onload = async () => {
     const container = document.querySelector('.wheel-wrapper');
     const btn = document.getElementById("resetbutton");
     const props = {
-        itemw: 5,
+        itemw: 7,
         radius: 0.9,
         pointerAngle: 0,
         itemLabelRadius: 0.6,
@@ -64,7 +64,7 @@ window.onload = async () => {
         {
             image: b,
             imageScale: 1,
-            label: 'Twin Boy & Girl',
+            label: 'Boy & Girl Twins',
         },
       ],
       itemLabelRadiusMax: 0.3,
@@ -616,7 +616,7 @@ var Wheel = class {
             y: t / 2 + t * this._offset.y
         }, this._actualRadius = this._size / 2 * this.radius, this._itemLabelFontSize = this.itemLabelFontSizeMax * (this._size / 500), this._labelMaxWidth = this._actualRadius * (this.itemLabelRadius - this.itemLabelRadiusMax), this.itemLabelAlign === "center" && (this._labelMaxWidth *= 2);
         for (let a of this._items){ 
-            if (a.label == "Twin Boy & Girl") {
+            if (a.label == "Boy & Girl Twins") {
                 a.fontSize = Math.min(this._itemLabelFontSize, E(a.label, this.itemLabelFont, this._labelMaxWidth+50, this._context));    
             } else {
                 a.fontSize = Math.min(this._itemLabelFontSize+15, E(a.label, this.itemLabelFont, this._labelMaxWidth, this._context));        
