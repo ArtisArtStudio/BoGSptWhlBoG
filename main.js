@@ -14,20 +14,23 @@ var color1 = '#ffc0cb';
 var color2 = '#7FB1ED';
 var color4 ='#969696';
 var color3 = 'linear-gradient(90deg, rgba(255,192,203,1) 0%, rgba(182,182,242,1) 50%, rgba(127,177,237,1) 100%)';
+var color3a = '-moz-linear-gradient(90deg, rgba(255,192,203,1) 0%, rgba(182,182,242,1) 50%, rgba(127,177,237,1) 100%)';
+var color3b = '-webkit-linear-gradient(90deg, rgba(255,192,203,1) 0%, rgba(182,182,242,1) 50%, rgba(127,177,237,1) 100%)';
 var colortxt1 = '#F860AA';
 var colortxt2= '#0066FFFF';
 var colortxt3= '#424242';
 //Select the background color
-var color =color3;
+var color =color1;
 //Select the text color
-var colortxt = colortxt3;
+var colortxt = colortxt1;
 var gendertext1 = "It's Twin Girls!";
 var gendertext2 = "It's Twin Boys!";
 var gendertext3= "It's";
 var gendertext4= "It is a Demo!";
 
 //Select the gender text
-var gendertext = gendertext3;
+var gendertext = gendertext1;
+
 function randomInRange(min, max) {
     return Math.random() * (max - min) + min;
 };
@@ -40,16 +43,26 @@ function confetti_effect() {
     $('#tboy').show();
     $('#tboy').text(gendertext);
     $('#tboy').css('color',colortxt);
-    //$('#boy').hide();
-    $('#boy').text("a Boy");
-    $('#or').text(" & ");
     $('#twins').hide();
-    //$('#girl').hide();
-    $('#girl').text("a Girl");
+    $('#boy').hide();    
+    $('#girl').hide();
     document.getElementsByTagName("body")[0].style.backgroundColor = color;
+    if (color != color3) {
+        color3a = color;
+        color3b = color;
+        $('#or').hide();
+    } else {
+        $('#boy').text("a Boy");
+        $('#or').text(" & ");
+        $('#girl').text("a Girl");
+    }
+    
     document.getElementsByTagName("body")[0].style.backgroundImage = 'none';
-    $("body").css("background-image",color);
-    //document.getElementById("H3").insertAdjacentHTML('afterend', "<h4 id='testtext' style='white-space:normal'> Depending on the product you buy, here it will say either <br> 'It is a Girl!' or 'It is a Boy! with pink or blue background.</h4>");
+    $('body').css({
+        'background-image:' : color,
+        'background-image:' : color3a,
+        'background-image:' : color3b,
+    });
 
     $('#H3').hide();
     $('#H4').hide();
@@ -62,16 +75,16 @@ function confetti_effect() {
     }
     triggered=true;
    // do this for 10 seconds
-   var duration = 10 * 1000;
+   var duration = 7 * 1000;
    var end = Date.now() + duration;
    var defaults = { startVelocity: 10, spread: 360, ticks: 70, zIndex: 0 };
    var particleCount = 5 ;
    (function frame() {
    // launch a few confetti from the left edge
-   confetti({...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFFFFF']}
+   confetti({...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: [colortxt]}
    );
    // and launch a few from the right edge
-   confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },colors: ['#FFFFFF']}
+   confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },colors: [colortxt]}
    );
 
    // keep going until we are out of time

@@ -22,7 +22,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size:cover;
-  min-height: 100vh;
+  min-height: 100%;
   -webkit-text-size-adjust: none;
    -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
@@ -197,10 +197,13 @@ white-space:normal;
     font-size: calc(0.7rem + 0.8vw) ;
   }
   .pagetop h1 {
-    font-size: calc(3rem + 1.8vw);
+    font-size: calc(3rem + 1.5vw);
   }
   .pagetop h3 {
     font-size: calc(1.2rem + 0.5vw);
+  }
+  #t1 {
+    line-height: 1 !important;
   }
   /* #mainbody {
     position: inherit;
@@ -216,16 +219,16 @@ white-space:normal;
   } */
   #scratcher-box {
     position:absolute;
-    width: 22em;
-    height: 22em; 
-    top: 70%;
+    width: 20em;
+    height: 20em; 
+    top: 63%;
   }
   
 } 
 
 @media (max-width: 320px) { 
    .pagetop h1 {
-    font-size: calc(2rem + 2vw);
+    font-size: calc(2rem + 1.5vw);
   }
   .pagetop h3 {
     font-size: calc(1.1rem + 0.5vw);
@@ -233,7 +236,7 @@ white-space:normal;
   .pagetop h4 {
     font-size: calc(0.7rem + 0.6vw) ;
   }
-  #boy {
+  #t1 {
     line-height: 1 !important;
   }
   /* .images{
@@ -243,7 +246,7 @@ white-space:normal;
     position:absolute;
     width: 17em;
     height: 17em; 
-    top: 68%;
+    top: 63%;
   }
   /* #t1 {
     width: 300px;
